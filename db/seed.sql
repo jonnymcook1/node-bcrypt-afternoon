@@ -1,6 +1,6 @@
-DROP TABLE IF EXISTS users;
+DROP TABLE IF EXISTS dragon_users;
 
-CREATE TABLE users
+CREATE TABLE dragon_users
 (
   id SERIAL PRIMARY KEY,
   is_admin BOOLEAN default false,
@@ -8,7 +8,7 @@ CREATE TABLE users
   hash text
 );
 
-INSERT INTO users
+INSERT INTO dragon_users
 (is_admin, username, hash)
 VALUES
 (true, 'Trogdor', '$2a$10$wZUxoi7vsBOeHK3zhiY4H.Nc5WvuyukqmsGjat9XMGl40w3/RhdiW'),
@@ -31,4 +31,3 @@ VALUES
 ('http://www.theholidayspot.com/easter/treasure_hunt/images/treasure-chest.png', 1),
 ('https://comps.canstockphoto.com/opened-treasure-chest-with-treasures-illustration_csp15511126.jpg', 2),
 ('https://vignette.wikia.nocookie.net/politicsandwar/images/d/d9/Treasure.jpg/revision/latest?cb=20170515133205', 3);
-
